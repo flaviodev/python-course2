@@ -1,8 +1,6 @@
-# Python Course
+# Python Course 2
 
 Python introductory course with notions of syntax and control structures
-
-The code implemented is a game where the user must guess a certain number.
 
 To run using docker
 
