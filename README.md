@@ -1,6 +1,6 @@
 # Python Course 2
 
-Python introductory course with notions of syntax and control structures
+An introduction (a bit more advanced) to the language, where a small application is implemented in the context of the social network. This course is a preparation for using Django, implementing object-oriented concepts, among others.
 
 To run using docker
 
