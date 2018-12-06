@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  db:
+    image: mongo
+    restart: always
+    volumes:
+      - ./data:/data
+    expose:
+        - "27017"
+    ports:
+      - "27017:27017"
+    network_mode: bridge
+  py:
+    image: flaviodev-python
+    command: tail -f /dev/null
+    volumes:
+      - ./src:/usr/src
+    links:
+      - db
+    depends_on:
+      - db
+    network_mode: bridge
