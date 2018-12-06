@@ -5,10 +5,8 @@ if(__name__ == "__main__"):
 
 def run():
     print("---------------------------------------------------------------")
-    print("Create a new Profile")
+    print("Profiles")
     print("---------------------------------------------------------------")
 
-    profile_name = input("Type the profile name:")
-    profile = Profile(name = profile_name)
-    profile.save()
-    
+    for profile in Profile.objects:
+        print(profile.name)
