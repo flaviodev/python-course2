@@ -8,7 +8,7 @@ def run():
     print("Create a new Profile")
     print("---------------------------------------------------------------")
 
-    profile_name = input("Type the profile name:")
+    profile_name = input("Type the profile name: ")
     profile = Profile(name = profile_name)
     profile.save()
     

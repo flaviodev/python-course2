@@ -1,3 +1,4 @@
+import traceback
 from models.profile import Profile
 
 if(__name__ == "__main__"):
@@ -5,7 +6,7 @@ if(__name__ == "__main__"):
 
 def run():
     print("---------------------------------------------------------------")
-    print("Profiles")
+    print("Update a Profile")
     print("---------------------------------------------------------------")
 
     i = 1
@@ -13,3 +14,11 @@ def run():
         print('{} - {}'.format(i, profile.name))
         i += 1
 
+    try:
+        profile_id = int(input("Type the profile id you want to update: "))
+        profile = Profile.objects[profile_id-1]
+        profile_name = input("Type the profile name: ")
+        profile.name = profile_name
+        profile.save()
+    except:
+        traceback.print_exc()
