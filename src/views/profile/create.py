@@ -9,6 +9,6 @@ def run():
     print("---------------------------------------------------------------")
 
     profile_name = input("Type the profile name: ")
-    profile = Profile(name = profile_name)
+    profile = Profile(profile_name)
     profile.save()
     
