@@ -8,8 +8,10 @@ def run():
     print("Profiles")
     print("---------------------------------------------------------------")
 
+    
+
     i = 1
     for profile in Profile.objects:
-        print('{} - {}'.format(i, profile.name))
+        print('{} - {} ({} likes)'.format(i, profile.name, profile.likes if not None else 0))
         i += 1
 
