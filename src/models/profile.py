@@ -2,6 +2,5 @@ from mongoengine import *
 
 class Profile(Document):
     name = StringField(required=True, max_length=200)
+    likes = LongField(required=False)
 
-def __init__ (self, name):
-    self.name = name
