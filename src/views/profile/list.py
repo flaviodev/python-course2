@@ -12,6 +12,6 @@ def run():
 
     i = 1
     for profile in Profile.objects:
-        print('{} - {} ({} likes)'.format(i, profile.name, profile.likes if not None else 0))
+        print('{} - {} ({} likes)'.format(i, profile.name, profile.get_likes() if not None else 0))
         i += 1
 
