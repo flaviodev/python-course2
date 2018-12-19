@@ -8,10 +8,11 @@ def run():
     print("Profiles")
     print("---------------------------------------------------------------")
 
-    
+    try: 
 
-    i = 1
-    for profile in Profile.objects:
-        print('{} - {} ({} likes)'.format(i, profile.name, profile.get_likes() if not None else 0))
-        i += 1
+        i = 1
+        for profile in Profile.objects:
+            print('{} - {} ({} likes - Credits: $ {})'.format(i, profile.get_name(), profile.get_likes() if not None else 0, profile.get_credits() if profile.is_vip() else '0.0'))
+            i += 1
 
+    except Exception as e: print(e)
