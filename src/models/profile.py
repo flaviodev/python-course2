@@ -1,6 +1,7 @@
 from mongoengine import *
 
 class Profile(Document):
+    
     meta = {'allow_inheritance': True}
     __name = StringField(name='name', required=True, max_length=200)
     __likes = LongField(name='likes', default=0)
