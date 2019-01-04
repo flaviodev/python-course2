@@ -24,3 +24,7 @@ class Profile(Document):
 
     def to_string(self):
         return '{} ({} likes)'.format(self.__name,self.__likes)
+
+    @staticmethod
+    def menu_name():
+        return 'Profiles'

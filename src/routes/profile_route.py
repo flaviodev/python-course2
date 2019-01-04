@@ -1,3 +1,4 @@
+from models.profile import Profile
 import views.profile.create
 import views.profile.list
 import views.profile.update
@@ -14,5 +15,5 @@ def run():
     functions = {1 : views.profile.list, 2 : views.profile.create, 3 : views.profile.update, 4 : views.profile.delete, 5 : views.profile.like, 6 : views.profile.apply_rem_vip}
 
 
-    app.menu.show_menu('Profiles', options, functions )
+    app.menu.show_menu(Profile.menu_name(), options, functions )
 
